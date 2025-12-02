@@ -1,0 +1,5 @@
+{"timestamp": "2024-01-15T10:00:00Z", "level": "INFO", "endpoint": "/api/users", "response_time_ms": 45, "status_code": 200, "user_id": "user_1"}
+{"timestamp": "2024-01-15T10:00:01Z", "level": "ERROR", "endpoint": "/api/orders", "response_time_ms": 2500, "status_code": 500, "user_id": "user_2"}
+{"timestamp": "2024-01-15T10:00:02Z", "level": "WARN", "endpoint": "/api/products", "response_time_ms": 350, "status_code": 400, "user_id": "user_3"}
+{"timestamp": "2024-01-15T10:00:03Z", "level": "INFO", "endpoint": "/api/users", "response_time_ms": 89, "status_code": 200, "user_id": "user_4"}
+{"timestamp": "2024-01-15T10:00:04Z", "level": "DEBUG", "endpoint": "/health", "response_time_ms": 5, "status_code": 200, "user_id": "user_5"}

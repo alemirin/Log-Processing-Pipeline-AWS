@@ -1,0 +1,30 @@
+# One-time setup (Complete setup steps in README beforehand)
+cd event-pipeline
+
+# Start and deploy
+make localstack-up             # Start LocalStack
+make deploy-local              # Build + Deploy everything
+
+# Set environment variables (copy from deploy output)
+export AWS_ENDPOINT_URL="http://localhost:4566"
+export AWS_ACCESS_KEY_ID="test"
+export AWS_SECRET_ACCESS_KEY="test"
+export AWS_DEFAULT_REGION="us-east-1"
+export S3_BUCKET=$(cd infrastructure/terraform && terraform output -raw s3_bucket_name)
+export DYNAMODB_TABLE=$(cd infrastructure/terraform && terraform output -raw dynamodb_table_name)
+
+# To Test Single Upload
+make test-upload-local         # Upload sample file and view results
+make view-results-local        # View results again
+
+# To run test suite
+make run-tests-local
+
+# Cleanup when done
+make destroy-local             # Remove Terraform resources
+make localstack-down           # Stop LocalStack
+
+# If you want to do everything in one flow:
+make full-local
+
+* Ensure you have gone through the setup steps in the README *

@@ -1,0 +1,17 @@
+# Set up
+cd event-pipeline
+
+Follow setup instructions
+
+# Authenticate and deploy to AWS and run tests
+aws configure
+aws configure set aws_session_token <YOUR_SESSION_TOKEN>
+
+aws iam get-role --role-name LabRole --query 'Role.Arn' --output text
+
+Paste the output arn into your aws-learner-lab.tfvars file.
+
+unset AWS_ENDPOINT_URL
+
+make deploy-aws
+make run-tests-aws

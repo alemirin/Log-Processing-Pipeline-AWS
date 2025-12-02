@@ -1,0 +1,17 @@
+{
+  "environment": "local",
+  "total_tests": 32,
+  "successful_tests": 30,
+  "failed_tests": 0,
+  "avg_upload_time_ms": 30.730549494425457,
+  "avg_e2e_time_ms": 1194.5903698603313,
+  "avg_processing_time_ms": 1.8333333333333333,
+  "p50_e2e_ms": 1113.8575077056885,
+  "p95_e2e_ms": 1385.369598865509,
+  "p99_e2e_ms": 1388.5757040977478,
+  "min_e2e_ms": 1080.2361965179443,
+  "max_e2e_ms": 1389.5611763000488,
+  "throughput_files_per_sec": 0.8371070328625851,
+  "error_rate_percent": 6.25,
+  "cold_start_count": 2
+}

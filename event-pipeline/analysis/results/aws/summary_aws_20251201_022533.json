@@ -1,0 +1,17 @@
+{
+  "environment": "aws",
+  "total_tests": 32,
+  "successful_tests": 30,
+  "failed_tests": 0,
+  "avg_upload_time_ms": 151.21134916941324,
+  "avg_e2e_time_ms": 1736.465819676717,
+  "avg_processing_time_ms": 24.966666666666665,
+  "p50_e2e_ms": 1315.1334524154663,
+  "p95_e2e_ms": 2395.4872608184814,
+  "p99_e2e_ms": 2417.089262008667,
+  "min_e2e_ms": 1285.329818725586,
+  "max_e2e_ms": 2425.814628601074,
+  "throughput_files_per_sec": 0.575882340250252,
+  "error_rate_percent": 6.25,
+  "cold_start_count": 2
+}

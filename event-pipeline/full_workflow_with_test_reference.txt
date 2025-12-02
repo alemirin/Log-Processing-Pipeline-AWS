@@ -1,0 +1,31 @@
+# Complete workflow from scratch
+cd event-pipeline
+
+# 1. Install Python dependencies and (optionally: set up python virtual environment)
+pip install -r requirements.txt
+
+# 2. Start LocalStack and deploy
+make localstack-up
+make deploy-local
+
+# 3. Run LocalStack tests (sets env vars automatically)
+make run-tests-local
+
+# 4. Authenticate and deploy to AWS and run tests
+aws configure
+aws configure set aws_session_token <YOUR_SESSION_TOKEN>
+
+aws iam get-role --role-name LabRole --query 'Role.Arn' --output text
+
+Paste the output arn into your aws-learner-lab.tfvars file.
+
+make deploy-aws
+make run-tests-aws
+
+# 5. Generate charts
+make generate-charts
+
+# 6. View results
+open analysis/charts/
+
+# 7. View docs/report to see my results and compare with your own!
